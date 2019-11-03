@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自己练习</title>
+</head>
+<body>
+<hr color="green" size="200px" width="100%px" align="center"/>
+<h1>hellow word</h1>
+<div class="d1" onclick="alert()"></div>
+<input type="button" value="获取服务端返回的User数据" id="btn">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    $("#btn").click(function(){
+        $.post("../user", function(result){
+            //result的值就是：{"name":"张三", "sex":"男", "age":20}
+            var v = result.age;
+            alert(v); }, "json");});//////////////////////////////////////////////
+    response.setContentType("text/html;charset=utf-8");
+
+</script>
+</body>
+</html>
